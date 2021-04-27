@@ -64,8 +64,26 @@ game.scene.addChild(store.currentFruit);
 
 const evt = background.addComponent(new Event());
 let touched = false;
+
+let fruitWidth = {
+  'yingtao': 30,
+  'ningmeng': 56,
+  'mihoutao': 55,
+  'fanqie': 67,
+  'danqie': 25,
+  'chengzi': 48,
+  'yezi': 107,
+  'hamigua': 100,
+  'xigua': 146
+}
 const touchmoveFn = (e: any) => {
-  if (!touched && store.currentFruit && store.currentFruit.transform) {
+  console.log(store.currentFruit)
+  let x: any = e.data.position.x
+  if (!touched 
+    && store.currentFruit 
+    && store.currentFruit.transform 
+    && x < 750 - fruitWidth[store.currentFruit._name]
+    && x > fruitWidth[store.currentFruit._name]) {
     store.currentFruit.transform.position.x = e.data.position.x;
   }
 };
@@ -97,6 +115,7 @@ evt.on('touchmove', (e) => {
 });
 
 evt.on('touchend', (e) => {
+  
   if (!touched) {
     touched = true;
     touchend();
