@@ -66,7 +66,6 @@ const evt = background.addComponent(new Event());
 let touched = false;
 
 const touchmoveFn = (e: any) => {
-  console.log()
   let x: any = e.data.position.x
   if (!touched 
     && store.currentFruit 
