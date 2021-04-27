@@ -1,6 +1,6 @@
 # Physics Demo - Eva.js 合成大西瓜
 
-This is a game with [MatterJS](http://npmjs.com/package/@eva/plugin-matterjs) physics system.
+This is a game create with [MatterJS](http://npmjs.com/package/@eva/plugin-matterjs) physics system.
 
 Demo: [https://eva.js.org/wantermelon/](https://eva.js.org/wantermelon/)
 
