@@ -27,3 +27,4 @@ test/**/reports
 db.json
 coverage.info
 *-debug.log
+package-lock.json
