@@ -1,10 +1,10 @@
-# Start Eva.js
+# Physics Demo - Eva.js 合成大西瓜
 
-This repository is a Eva.js project demo, you can use this demo to start a Eva.js project.
+This is a game with [MatterJS](http://npmjs.com/package/@eva/plugin-matterjs) physics system.
 
-[https://eva-engine.github.io/wantermelon/](https://eva-engine.github.io/wantermelon/)
+Demo: [https://eva.js.org/wantermelon/](https://eva.js.org/wantermelon/)
 
-Please visite with use mobile device model.
+Thanks for [@wangybg](https://github.com/wangybg) to develop matterjs plugin and this demo.
 
 ## Download
 ```bash
