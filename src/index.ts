@@ -64,8 +64,14 @@ game.scene.addChild(store.currentFruit);
 
 const evt = background.addComponent(new Event());
 let touched = false;
+
 const touchmoveFn = (e: any) => {
-  if (!touched && store.currentFruit && store.currentFruit.transform) {
+  let x: any = e.data.position.x
+  if (!touched 
+    && store.currentFruit 
+    && store.currentFruit.transform 
+    && x < 750 - FRUIT_RADIUS[store.currentFruit._name].radius
+    && x > FRUIT_RADIUS[store.currentFruit._name].radius) {
     store.currentFruit.transform.position.x = e.data.position.x;
   }
 };
@@ -97,6 +103,7 @@ evt.on('touchmove', (e) => {
 });
 
 evt.on('touchend', (e) => {
+  
   if (!touched) {
     touched = true;
     touchend();
